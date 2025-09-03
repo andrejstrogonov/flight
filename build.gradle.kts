@@ -33,8 +33,13 @@ dependencies {
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("org.postgresql:postgresql")
 	annotationProcessor("org.projectlombok:lombok")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+	testImplementation("org.springframework.boot:spring-boot-starter-test") {
+        exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
+        exclude(group = "org.junit.jupiter")
+    }
+	testImplementation("org.testng:testng:7.8.0")
+	testImplementation("org.mockito:mockito-core:5.5.0")
+	testImplementation("org.mockito:mockito-testng:0.5.0")
 }
 
 hibernate {
@@ -44,5 +49,5 @@ hibernate {
 }
 
 tasks.withType<Test> {
-	useJUnitPlatform()
+    useTestNG()
 }
