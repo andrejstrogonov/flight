@@ -1,7 +1,9 @@
 package com.gridnine.testing;
 
 import java.util.List;
-import java.util.stream.Collectors; /**
+import java.util.stream.Collectors;
+
+/**
  * Bean that represents a flight.
  */
 public class Flight {
@@ -15,7 +17,6 @@ public class Flight {
         return segments;
     }
 
-    @Override
     public String toString() {
         return segments.stream().map(Object::toString)
             .collect(Collectors.joining(" "));

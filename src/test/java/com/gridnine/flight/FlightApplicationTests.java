@@ -1,13 +1,11 @@
 package com.gridnine.flight;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
 class FlightApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
-
+    @Test
+    void mainRunsWithoutExceptions() {
+        com.gridnine.flight.FlightApplication.main(new String[]{});
+    }
 }

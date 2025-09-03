@@ -11,8 +11,13 @@ public class FlightFilters {
     
     // 1. Filter out flights that have already departed
     public static List<Flight> removeDepartedFlights(List<Flight> flights) {
-        LocalDateTime now = LocalDateTime.now();
+        return removeDepartedFlights(flights, LocalDateTime.now());
+    }
+
+    // Overload for deterministic testing
+    public static List<Flight> removeDepartedFlights(List<Flight> flights, LocalDateTime now) {
         return flights.stream()
+                .filter(flight -> !flight.getSegments().isEmpty())
                 .filter(flight -> flight.getSegments().get(0).getDepartureDate().isAfter(now))
                 .collect(Collectors.toList());
     }

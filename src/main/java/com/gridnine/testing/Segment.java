@@ -2,7 +2,8 @@ package com.gridnine.testing;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Objects; /**
+import java.util.Objects;
+/**
  * Bean that represents a flight segment.
  */
 public class Segment {

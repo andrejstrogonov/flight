@@ -1,13 +1,9 @@
 package com.gridnine.flight;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
 public class FlightApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(FlightApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        // Delegate to simple console app implementation
+        com.gridnine.testing.Main.main(args);
+    }
 }
