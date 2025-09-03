@@ -4,7 +4,7 @@ plugins {
 
 group = "com.gridnine"
 version = "0.0.1-SNAPSHOT"
-description = "Flight filters kata (plain Java)"
+description = "Flight filters kata plain Java"
 
 java {
 	toolchain {
